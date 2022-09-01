@@ -1,11 +1,26 @@
 Isu 1
 Pengenalan Tajwid
+- Mengenalkan hukum tajwid kepada anak-anak
+- Dibedah berdasarkan tingkat kesulitan
+- 
 
 Isu 2
+Isu pembuangan dan pemilahan sampah di kota
+- Kondisi dunia sudah penuh dengan sampah 
+- Player berperan sebagai pemulung 
+- Ada pembelajaran tentang pengolahan sampah
+- materi tentang pemilahan sampah 
 
 Isu 3
+Isu pengenalan sex education di kalangan remaja
+//CANCELLED
 
 Isu 4
+Saham
+- Sistem jual beli Saham
+- Referensi game : monopoli
+- Analisis harga saham
+- 
 
 Isu 5 **
 Krisis Ekonomi
@@ -68,3 +83,6 @@ Isu 12
 Lalu lintas untuk anak
 - Target: Anak usia 8 - 15
 
+Isu 13
+Pembelajaran Tata Bahasa Indonesia
+- 
