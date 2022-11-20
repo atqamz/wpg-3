@@ -36,14 +36,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Prototype\OverlayManager.cs" />
-     <Compile Include="Assets\_Prototype\ViewportHandler.cs" />
-     <Compile Include="Assets\_Prototype\EnvOverlay.cs" />
-     <Compile Include="Assets\_Prototype\PlayerMove.cs" />
-     <Compile Include="Assets\_Prototype\TaskSleep.cs" />
-     <Compile Include="Assets\_Prototype\CameraAnchor.cs" />
-     <Compile Include="Assets\_Prototype\Scripts\MainPlayerMove.cs" />
-     <Compile Include="Assets\_Prototype\Scripts\Main.cs" />
+     <Compile Include="Assets\_Prototype\Scripts\MouseInput.cs" />
+     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\Environment\IClickable.cs" />
+     <Compile Include="Assets\Temp.Scripts\CameraAnchor.cs" />
+     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\EnumContainer.cs" />
+     <Compile Include="Assets\Temp.Scripts\ViewportHandler.cs" />
+     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\Environment\BaseEnvironment.cs" />
+     <Compile Include="Assets\Temp.Scripts\EnvOverlay.cs" />
+     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\EventManager.cs" />
+     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\Temp.Scripts\TaskSleep.cs" />
+     <Compile Include="Assets\Temp.Scripts\OverlayManager.cs" />
+     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\Environment\Bed.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
