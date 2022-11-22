@@ -6,6 +6,19 @@ namespace MainPanel
     {
         [SerializeField] private Transform clickPosition;
         [SerializeField] protected EnvironmentType environmentType;
+        [SerializeField] protected GameObject environmentPanel;
+        protected bool onRange;
+
+        private void Update()
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                if (onRange)
+                {
+                    EventManager.Instance.EnvironmentClick(environmentType);
+                }
+            }
+        }
 
         public Vector3 OnClickPosition()
         {
@@ -16,7 +29,10 @@ namespace MainPanel
         {
             if (other.CompareTag("Player"))
             {
-                EventManager.Instance.OnEnvironment(true, environmentType);
+                environmentPanel.SetActive(true);
+
+                onRange = true;
+                EventManager.Instance.EnvironmentRange(true, environmentType);
             }
         }
 
@@ -24,7 +40,10 @@ namespace MainPanel
         {
             if (other.CompareTag("Player"))
             {
-                EventManager.Instance.OnEnvironment(false, environmentType);
+                environmentPanel.SetActive(false);
+
+                onRange = false;
+                EventManager.Instance.EnvironmentRange(false, environmentType);
             }
         }
     }

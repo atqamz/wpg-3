@@ -12,16 +12,22 @@ namespace MainPanel
             Instance = this;
         }
 
-        public event Action<bool, EnvironmentType> onEnvironment;
-        public void OnEnvironment(bool _isOn, EnvironmentType _environmentType)
+        public event Action<bool, EnvironmentType> onEnvironmentRange;
+        public void EnvironmentRange(bool _isOn, EnvironmentType _environmentType)
         {
-            onEnvironment?.Invoke(_isOn, _environmentType);
+            onEnvironmentRange?.Invoke(_isOn, _environmentType);
         }
 
-        public event Action<EnvironmentType> onClickEnvironment;
-        public void OnClickEnvironment(EnvironmentType _environmentType)
+        public event Action<EnvironmentType> onEnvironmentClick;
+        public void EnvironmentClick(EnvironmentType _environmentType)
         {
-            onClickEnvironment?.Invoke(_environmentType);
+            onEnvironmentClick?.Invoke(_environmentType);
+        }
+
+        public event Action<float> onBedBlanketChange;
+        public void BedBlanketChange(float _value)
+        {
+            onBedBlanketChange?.Invoke(_value);
         }
     }
 }

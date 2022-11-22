@@ -42,7 +42,7 @@
      <Compile Include="Assets\_Prototype\MainPanel\Scripts\EnumContainer.cs" />
      <Compile Include="Assets\_Prototype\MainPanel\Scripts\Environment\IClickable.cs" />
      <Compile Include="Assets\_Prototype\MainPanel\Scripts\Environment\BaseEnvironment.cs" />
-     <Compile Include="Assets\_Prototype\SubPanel\BedPanel.cs" />
+     <Compile Include="Assets\_Prototype\EnvPanel\BedPanel.cs" />
      <Compile Include="Assets\_Prototype\MainPanel\Scripts\MouseInput.cs" />
      <Compile Include="Assets\OLD\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\OLD\Scripts\ViewportHandler.cs" />
@@ -50,6 +50,7 @@
      <Compile Include="Assets\OLD\Scripts\OverlayManager.cs" />
      <Compile Include="Assets\OLD\Scripts\EnvOverlay.cs" />
      <Compile Include="Assets\OLD\Scripts\CameraAnchor.cs" />
+     <Compile Include="Assets\_Prototype\MainPanel\Scripts\Main.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

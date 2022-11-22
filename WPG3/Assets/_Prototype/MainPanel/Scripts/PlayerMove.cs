@@ -30,22 +30,24 @@ namespace MainPanel
                 Vector3 position = MouseInput.GetMouseWorldPosition();
 
                 // if mouse position is not on Obstacle Layer Mask
-                if (Physics2D.OverlapPoint(position, LayerMask.GetMask("Unwalkable")))
+                if (Physics2D.OverlapPoint(position, LayerMask.GetMask("Environment")))
                 {
                     // get the Environment click position
-                    Collider2D collider = Physics2D.OverlapPoint(position, LayerMask.GetMask("Unwalkable"));
+                    Collider2D collider = Physics2D.OverlapPoint(position, LayerMask.GetMask("Environment"));
                     Vector3 clickablePosition = collider.GetComponent<IClickable>().OnClickPosition();
 
                     // set path to Environment click position
                     aiPathComponent.destination = clickablePosition;
                     aiPathComponent.SearchPath();
                 }
-                else
-                {
-                    // find path to mouse position 
-                    aiPathComponent.destination = position;
-                    aiPathComponent.SearchPath();
-                }
+
+                // if outside AstarPath grid, return
+                if (!AstarPath.active.GetNearest(position).node.Walkable)
+                    return;
+
+                // find path to mouse position 
+                aiPathComponent.destination = position;
+                aiPathComponent.SearchPath();
             }
         }
     }
