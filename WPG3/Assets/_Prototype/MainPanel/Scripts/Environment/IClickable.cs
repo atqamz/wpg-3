@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LeftMainPanel
+namespace MainPanel
 {
     public interface IClickable
     {

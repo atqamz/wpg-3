@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-namespace LeftMainPanel
+namespace MainPanel
 {
     public class PlayerMove : MonoBehaviour
     {

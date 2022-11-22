@@ -36,18 +36,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Prototype\Scripts\MouseInput.cs" />
-     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\Environment\IClickable.cs" />
-     <Compile Include="Assets\Temp.Scripts\CameraAnchor.cs" />
-     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\EnumContainer.cs" />
-     <Compile Include="Assets\Temp.Scripts\ViewportHandler.cs" />
-     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\Environment\BaseEnvironment.cs" />
-     <Compile Include="Assets\Temp.Scripts\EnvOverlay.cs" />
-     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\EventManager.cs" />
-     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\PlayerMove.cs" />
-     <Compile Include="Assets\Temp.Scripts\TaskSleep.cs" />
-     <Compile Include="Assets\Temp.Scripts\OverlayManager.cs" />
-     <Compile Include="Assets\_Prototype\LeftMainPanel\Scripts\Environment\Bed.cs" />
+     <Compile Include="Assets\_Prototype\MainPanel\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\_Prototype\MainPanel\Scripts\Environment\Bed.cs" />
+     <Compile Include="Assets\_Prototype\MainPanel\Scripts\EventManager.cs" />
+     <Compile Include="Assets\_Prototype\MainPanel\Scripts\EnumContainer.cs" />
+     <Compile Include="Assets\_Prototype\MainPanel\Scripts\Environment\IClickable.cs" />
+     <Compile Include="Assets\_Prototype\MainPanel\Scripts\Environment\BaseEnvironment.cs" />
+     <Compile Include="Assets\_Prototype\SubPanel\BedPanel.cs" />
+     <Compile Include="Assets\_Prototype\MainPanel\Scripts\MouseInput.cs" />
+     <Compile Include="Assets\OLD\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\OLD\Scripts\ViewportHandler.cs" />
+     <Compile Include="Assets\OLD\Scripts\TaskSleep.cs" />
+     <Compile Include="Assets\OLD\Scripts\OverlayManager.cs" />
+     <Compile Include="Assets\OLD\Scripts\EnvOverlay.cs" />
+     <Compile Include="Assets\OLD\Scripts\CameraAnchor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -297,6 +299,9 @@
     <Reference Include="Unity.Burst.Cecil.Mdb">
         <HintPath>C:\Users\atqam\Documents\repo\unity\wpg-3\WPG3\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+        <HintPath>C:\Users\atqam\Documents\repo\unity\wpg-3\WPG3\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
         <HintPath>C:\Users\atqam\Documents\repo\unity\wpg-3\WPG3\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
@@ -311,9 +316,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>C:\Users\atqam\Documents\repo\unity\wpg-3\WPG3\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-        <HintPath>C:\Users\atqam\Documents\repo\unity\wpg-3\WPG3\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -821,17 +823,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{eaaf2c6b-6bcc-bbf2-10f9-40adeb8c7c33}</Project>
-      <Name>AstarPathfindingProjectEditor</Name>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{5a187fae-5c74-3b38-bb73-fc338b8676f3}</Project>
+      <Name>PackageToolsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
       <Project>{d78afe6f-8baf-cf19-a080-9c6af6c066ef}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
-    <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{5a187fae-5c74-3b38-bb73-fc338b8676f3}</Project>
-      <Name>PackageToolsEditor</Name>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{eaaf2c6b-6bcc-bbf2-10f9-40adeb8c7c33}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

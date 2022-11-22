@@ -1,10 +1,11 @@
 using UnityEngine;
 
-namespace LeftMainPanel
+namespace MainPanel
 {
     public class BaseEnvironment : MonoBehaviour, IClickable
     {
         [SerializeField] private Transform clickPosition;
+        [SerializeField] protected EnvironmentType environmentType;
 
         public Vector3 OnClickPosition()
         {
@@ -15,7 +16,7 @@ namespace LeftMainPanel
         {
             if (other.CompareTag("Player"))
             {
-                EventManager.Instance.ClickRange(true);
+                EventManager.Instance.OnEnvironment(true, environmentType);
             }
         }
 
@@ -23,7 +24,7 @@ namespace LeftMainPanel
         {
             if (other.CompareTag("Player"))
             {
-                EventManager.Instance.ClickRange(false);
+                EventManager.Instance.OnEnvironment(false, environmentType);
             }
         }
     }

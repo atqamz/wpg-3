@@ -1,4 +1,4 @@
-namespace LeftMainPanel
+namespace MainPanel
 {
     public enum EnvironmentType
     {
