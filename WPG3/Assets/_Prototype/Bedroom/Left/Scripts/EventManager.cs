@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace MainPanel
+namespace Bedroom
 {
     public class EventManager : MonoBehaviour
     {
@@ -24,6 +24,7 @@ namespace MainPanel
             onEnvironmentClick?.Invoke(_environmentType);
         }
 
+        // bed interactions
         public event Action<float> onBedBlanketChange;
         public void BedBlanketChange(float _value)
         {

@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MainPanel
+namespace Bedroom
 {
-    public class Main : MonoBehaviour
+    public class Left : MonoBehaviour
     {
         [SerializeField] private Image overlayImage;
 

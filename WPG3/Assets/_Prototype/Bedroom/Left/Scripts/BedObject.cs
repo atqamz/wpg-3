@@ -1,6 +1,6 @@
-namespace MainPanel
+namespace Bedroom
 {
-    public class Bed : BaseEnvironment
+    public class BedObject : BaseEnvObject
     {
         private void Awake()
         {

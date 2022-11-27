@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-namespace MainPanel
+namespace Bedroom
 {
     public class PlayerMove : MonoBehaviour
     {

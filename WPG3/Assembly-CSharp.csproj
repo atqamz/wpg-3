@@ -36,21 +36,23 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Prototype\MainPanel\Scripts\PlayerMove.cs" />
-     <Compile Include="Assets\_Prototype\MainPanel\Scripts\Environment\Bed.cs" />
-     <Compile Include="Assets\_Prototype\MainPanel\Scripts\EventManager.cs" />
-     <Compile Include="Assets\_Prototype\MainPanel\Scripts\EnumContainer.cs" />
-     <Compile Include="Assets\_Prototype\MainPanel\Scripts\Environment\IClickable.cs" />
-     <Compile Include="Assets\_Prototype\MainPanel\Scripts\Environment\BaseEnvironment.cs" />
-     <Compile Include="Assets\_Prototype\EnvPanel\BedPanel.cs" />
-     <Compile Include="Assets\_Prototype\MainPanel\Scripts\MouseInput.cs" />
-     <Compile Include="Assets\OLD\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\OLD\Scripts\ViewportHandler.cs" />
-     <Compile Include="Assets\OLD\Scripts\TaskSleep.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\BedObject.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\EnumContainer.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\EventManager.cs" />
      <Compile Include="Assets\OLD\Scripts\OverlayManager.cs" />
+     <Compile Include="Assets\OLD\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\MouseInput.cs" />
      <Compile Include="Assets\OLD\Scripts\EnvOverlay.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\IClickable.cs" />
      <Compile Include="Assets\OLD\Scripts\CameraAnchor.cs" />
-     <Compile Include="Assets\_Prototype\MainPanel\Scripts\Main.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Right\Scripts\BedPanel.cs" />
+     <Compile Include="Assets\OLD\Scripts\TaskSleep.cs" />
+     <Compile Include="Assets\_Prototype\GameManager.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\BaseEnvObject.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Right\Scripts\BaseEnvPanel.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Left.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

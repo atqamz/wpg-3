@@ -1,18 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
-using MainPanel;
 
-namespace EnvPanel
+namespace Bedroom
 {
     public class BedPanel : MonoBehaviour
     {
-        [SerializeField] private Slider blanketSlider;
         [SerializeField] private Image playerImage;
+        [SerializeField] private Slider blanketSlider;
 
         private void Awake()
         {
             blanketSlider.value = 0;
             playerImage.enabled = false;
+
+            gameObject.SetActive(false);
         }
 
         private void Start()
@@ -23,7 +24,7 @@ namespace EnvPanel
             blanketSlider.onValueChanged.AddListener((value) => EventManager.Instance.BedBlanketChange(value));
         }
 
-        private void OnEnvironmentRange(bool _isOn, EnvironmentType _environmentType)
+        public void OnEnvironmentRange(bool _isOn, EnvironmentType _environmentType)
         {
             if (_environmentType == EnvironmentType.BED)
             {
@@ -35,7 +36,7 @@ namespace EnvPanel
             }
         }
 
-        private void OnEnvironmentClick(EnvironmentType _environmentType)
+        public void OnEnvironmentClick(EnvironmentType _environmentType)
         {
             if (_environmentType == EnvironmentType.BED)
             {

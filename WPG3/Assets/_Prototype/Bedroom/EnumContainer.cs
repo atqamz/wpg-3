@@ -1,4 +1,4 @@
-namespace MainPanel
+namespace Bedroom
 {
     public enum EnvironmentType
     {

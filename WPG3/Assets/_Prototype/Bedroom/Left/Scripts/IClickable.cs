@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MainPanel
+namespace Bedroom
 {
     public interface IClickable
     {

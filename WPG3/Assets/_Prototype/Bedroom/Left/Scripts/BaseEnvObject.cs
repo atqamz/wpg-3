@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace MainPanel
+namespace Bedroom
 {
-    public class BaseEnvironment : MonoBehaviour, IClickable
+    public class BaseEnvObject : MonoBehaviour, IClickable
     {
         [SerializeField] private Transform clickPosition;
         [SerializeField] protected EnvironmentType environmentType;
