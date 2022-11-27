@@ -25,7 +25,7 @@ namespace Bedroom
             return clickPosition.position;
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        protected void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
@@ -34,7 +34,7 @@ namespace Bedroom
             }
         }
 
-        private void OnTriggerExit2D(Collider2D other)
+        protected void OnTriggerExit2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {

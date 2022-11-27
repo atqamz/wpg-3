@@ -3,6 +3,7 @@ namespace Bedroom
     public enum EnvironmentType
     {
         DEFAULT,
-        BED
+        BED,
+        TABLE
     }
 }

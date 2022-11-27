@@ -18,8 +18,17 @@ namespace Bedroom
         {
             if (_environmentType == EnvironmentType.BED)
             {
+                EventManager.Instance.Bed(true);
+
                 environmentPanel.SetActive(true);
             }
+        }
+
+        new private void OnTriggerExit2D(Collider2D other)
+        {
+            base.OnTriggerExit2D(other);
+
+            EventManager.Instance.Bed(false);
         }
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6561787559938925636}
   - component: {fileID: 6561787559938925632}
+  - component: {fileID: 7434780442427980212}
   - component: {fileID: 6561787559938925635}
   - component: {fileID: 6561787559938925634}
   - component: {fileID: 7653138423788651299}
@@ -54,6 +55,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eddcac8de94251498c1e1ffa4b0f5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  environmentFloorLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  environmentLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &7434780442427980212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6561787559938925639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312b80d1fad89984f993ad71b28120ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerImage: {fileID: 6561787561439870722}
 --- !u!114 &6561787559938925635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,9 +137,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 32400
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  slowdownDistance: 0.5
+  pickNextWaypointDist: 1
+  endReachedDistance: 0.5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0

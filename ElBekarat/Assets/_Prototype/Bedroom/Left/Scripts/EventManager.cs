@@ -24,7 +24,12 @@ namespace Bedroom
             onEnvironmentClick?.Invoke(_environmentType);
         }
 
-        // bed interactions
+        // bed events
+        public event Action<bool> onBed;
+        public void Bed(bool _isOn)
+        {
+            onBed?.Invoke(_isOn);
+        }
         public event Action<float> onBedBlanketChange;
         public void BedBlanketChange(float _value)
         {
