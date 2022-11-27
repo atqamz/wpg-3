@@ -16,7 +16,6 @@ namespace Bedroom
                 if (onRange)
                 {
                     EventManager.Instance.EnvironmentClick(environmentType);
-                    environmentPanel.SetActive(true);
                 }
             }
         }
