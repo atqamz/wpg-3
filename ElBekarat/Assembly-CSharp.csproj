@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\PlayerGFX.cs" />
      <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\OLD\Scripts\ViewportHandler.cs" />
      <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\BedObject.cs" />
@@ -45,8 +46,11 @@
      <Compile Include="Assets\OLD\Scripts\OverlayManager.cs" />
      <Compile Include="Assets\_Prototype\UIManager.cs" />
      <Compile Include="Assets\OLD\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Right\Scripts\TablePanel.cs" />
      <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\MouseInput.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Right\Scripts\ITask.cs" />
      <Compile Include="Assets\_Prototype\GameManager.cs" />
+     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\TableObject.cs" />
      <Compile Include="Assets\OLD\Scripts\EnvOverlay.cs" />
      <Compile Include="Assets\_Prototype\UI\OnEnvironmentRangeUI.cs" />
      <Compile Include="Assets\_Prototype\Bedroom\Right\Scripts\BaseEnvPanel.cs" />
@@ -55,10 +59,6 @@
      <Compile Include="Assets\_Prototype\Bedroom\Right\Scripts\BedPanel.cs" />
      <Compile Include="Assets\_Prototype\Bedroom\Left\Left.cs" />
      <Compile Include="Assets\OLD\Scripts\TaskSleep.cs" />
-     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\TableObject.cs" />
-     <Compile Include="Assets\_Prototype\Bedroom\Left\Scripts\PlayerGFX.cs" />
-     <Compile Include="Assets\_Prototype\Bedroom\Right\Scripts\TablePanel.cs" />
-     <Compile Include="Assets\_Prototype\Bedroom\Right\Scripts\ITask.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
