@@ -14,11 +14,14 @@ namespace Bedroom
 
         [Header("Minum")]
         [SerializeField] private Slider minumSlider;
+        private float minumCurrentValue;
 
         private void Awake()
         {
             makanButton.onClick.AddListener(OnMakanButtonClick);
             minumSlider.onValueChanged.AddListener(OnMinumSlideChange);
+
+            minumCurrentValue = minumSlider.maxValue;
         }
 
         private void OnMakanButtonClick()
@@ -37,6 +40,8 @@ namespace Bedroom
 
         private void OnMinumSlideChange(float _value)
         {
+            PreventIncreasedValue(minumSlider, _value);
+
             if (IsDoneMinum() && IsDoneMakan())
             {
                 OnTaskEnd();
@@ -48,6 +53,19 @@ namespace Bedroom
         {
             isiMakanImage.sprite = isiMakanSprites[isiMakanIndex];
             isiMakanIndex++;
+        }
+
+        private void PreventIncreasedValue(Slider _slider, float _newValue)
+        {
+            if (_newValue <= minumCurrentValue)
+            {
+                minumCurrentValue = _newValue;
+                minumSlider.value = minumCurrentValue;
+            }
+            else
+            {
+                _slider.value = minumCurrentValue;
+            }
         }
 
         private bool IsDoneMakan()
