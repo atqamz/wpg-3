@@ -16,6 +16,7 @@ namespace Bedroom
                 if (onRange)
                 {
                     EventManager.Instance.EnvironmentClick(environmentType);
+                    environmentPanel.SetActive(true);
                 }
             }
         }
@@ -29,8 +30,6 @@ namespace Bedroom
         {
             if (other.CompareTag("Player"))
             {
-                environmentPanel.SetActive(true);
-
                 onRange = true;
                 EventManager.Instance.EnvironmentRange(true, environmentType);
             }

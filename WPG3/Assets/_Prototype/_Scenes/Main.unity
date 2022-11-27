@@ -611,6 +611,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5248120656057286266, guid: f10debfebfa26254592e085f0b9735f8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248120656057286266, guid: f10debfebfa26254592e085f0b9735f8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -190
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f10debfebfa26254592e085f0b9735f8, type: 3}
 --- !u!1001 &7409661029872895394
@@ -707,6 +715,14 @@ PrefabInstance:
     - target: {fileID: 7409661028669939875, guid: 7fee22e0ccb91144ca659b7f20299a1c, type: 3}
       propertyPath: m_Name
       value: BedroomRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409661030198270333, guid: 7fee22e0ccb91144ca659b7f20299a1c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409661030198270333, guid: 7fee22e0ccb91144ca659b7f20299a1c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fee22e0ccb91144ca659b7f20299a1c, type: 3}

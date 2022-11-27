@@ -59,9 +59,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7409661028669939872}
     m_Modifications:
+    - target: {fileID: 7353597921091332992, guid: 7fc40b5fb3d17a146a3fd82f52909b18, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353597921091332992, guid: 7fc40b5fb3d17a146a3fd82f52909b18, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8311595723417439088, guid: 7fc40b5fb3d17a146a3fd82f52909b18, type: 3}
       propertyPath: m_Name
       value: BedPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8311595723417439088, guid: 7fc40b5fb3d17a146a3fd82f52909b18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8504789231364390697, guid: 7fc40b5fb3d17a146a3fd82f52909b18, type: 3}
       propertyPath: m_Pivot.x
