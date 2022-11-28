@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Bedroom
+namespace Game.Bedroom
 {
     public class PlayerGFX : MonoBehaviour
     {

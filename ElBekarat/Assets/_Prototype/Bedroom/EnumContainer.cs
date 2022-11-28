@@ -1,4 +1,4 @@
-namespace Bedroom
+namespace Game.Bedroom
 {
     public enum EnvironmentType
     {

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Bedroom
+namespace Game.Bedroom
 {
     public class EventManager : MonoBehaviour
     {

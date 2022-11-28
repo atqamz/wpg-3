@@ -1,33 +1,36 @@
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+namespace Game
 {
-    [SerializeField] private OnEnvironmentRangeUI onEnvironmentRangeUI;
-
-    private void Start()
+    public class UIManager : MonoBehaviour
     {
-        Bedroom.EventManager.Instance.onEnvironmentRange += OnEnvironmentRange;
-        Bedroom.EventManager.Instance.onEnvironmentClick += OnEnvironmentClick;
+        [SerializeField] private OnEnvironmentRangeUI onEnvironmentRangeUI;
 
-        HideAllUI();
-    }
+        private void Start()
+        {
+            Bedroom.EventManager.Instance.onEnvironmentRange += OnEnvironmentRange;
+            Bedroom.EventManager.Instance.onEnvironmentClick += OnEnvironmentClick;
 
-    private void OnEnvironmentRange(bool _isOn, Bedroom.EnvironmentType _environmentType)
-    {
-        if (_isOn)
-            onEnvironmentRangeUI.Show();
-        else
+            HideAllUI();
+        }
+
+        private void OnEnvironmentRange(bool _isOn, Bedroom.EnvironmentType _environmentType)
+        {
+            if (_isOn)
+                onEnvironmentRangeUI.Show();
+            else
+                onEnvironmentRangeUI.Hide();
+        }
+
+        private void OnEnvironmentClick(Bedroom.EnvironmentType _environmentType)
+        {
             onEnvironmentRangeUI.Hide();
-    }
-
-    private void OnEnvironmentClick(Bedroom.EnvironmentType _environmentType)
-    {
-        onEnvironmentRangeUI.Hide();
-    }
+        }
 
 
-    private void HideAllUI()
-    {
-        onEnvironmentRangeUI.Hide();
+        private void HideAllUI()
+        {
+            onEnvironmentRangeUI.Hide();
+        }
     }
 }

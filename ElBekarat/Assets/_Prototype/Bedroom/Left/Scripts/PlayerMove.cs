@@ -1,7 +1,7 @@
 using UnityEngine;
 using Pathfinding;
 
-namespace Bedroom
+namespace Game.Bedroom
 {
     public class PlayerMove : MonoBehaviour
     {
@@ -28,7 +28,7 @@ namespace Bedroom
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3 position = MouseInput.GetMouseWorldPosition();
+                Vector3 position = GetMouseWorldPosition();
 
                 // if mouse position is on Environment Layer Mask
                 if (Physics2D.OverlapPoint(position, environmentLayerMask))
@@ -51,6 +51,17 @@ namespace Bedroom
                     aiPathComponent.SearchPath();
                 }
             }
+        }
+
+        public Vector3 GetMouseWorldPosition()
+        {
+            // get the mouse position
+            Vector3 mousePosition = Input.mousePosition;
+
+            // convert the mouse position to a world position
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+            return worldPosition;
         }
     }
 

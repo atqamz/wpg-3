@@ -2,14 +2,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Bedroom
+namespace Game.Bedroom
 {
     public class TablePanel : MonoBehaviour, ITask
     {
         [Header("Makan")]
         [SerializeField] private Button makanButton;
         [SerializeField] private Image isiMakanImage;
-        [SerializeField] private List<Sprite> isiMakanSprites;
+        [SerializeField] private List<Sprite> isiMakanSpriteList;
         private int isiMakanIndex = 0;
 
         [Header("Minum")]
@@ -29,7 +29,7 @@ namespace Bedroom
             if (IsDoneMakan()) return;
 
             isiMakanIndex++;
-            isiMakanImage.sprite = isiMakanSprites[isiMakanIndex];
+            isiMakanImage.sprite = isiMakanSpriteList[isiMakanIndex];
 
             if (IsDoneMakan() && IsDoneMinum())
             {
@@ -51,7 +51,7 @@ namespace Bedroom
 
         private void ChangeIsiMakanSprite()
         {
-            isiMakanImage.sprite = isiMakanSprites[isiMakanIndex];
+            isiMakanImage.sprite = isiMakanSpriteList[isiMakanIndex];
             isiMakanIndex++;
         }
 
@@ -70,7 +70,7 @@ namespace Bedroom
 
         private bool IsDoneMakan()
         {
-            return isiMakanImage.sprite == isiMakanSprites[isiMakanSprites.Count - 1];
+            return isiMakanImage.sprite == isiMakanSpriteList[isiMakanSpriteList.Count - 1];
         }
 
         private bool IsDoneMinum()

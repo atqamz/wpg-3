@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Bedroom
+namespace Game.Bedroom
 {
     public interface IClickable
     {

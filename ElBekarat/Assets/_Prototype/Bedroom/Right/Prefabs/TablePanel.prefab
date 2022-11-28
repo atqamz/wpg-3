@@ -644,7 +644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   makanButton: {fileID: 459750549122610945}
   isiMakanImage: {fileID: 3924962088319872478}
-  isiMakanSprites:
+  isiMakanSpriteList:
   - {fileID: 21300000, guid: 2668a1c3821c19a49bb28ac86aecc254, type: 3}
   - {fileID: 21300000, guid: 876ec9a0d9cbc0d49990682c7948059c, type: 3}
   - {fileID: 21300000, guid: b085e38122e51464dbbf48484c5864d7, type: 3}
