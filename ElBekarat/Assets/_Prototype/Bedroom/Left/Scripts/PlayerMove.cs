@@ -6,6 +6,7 @@ namespace Game.Bedroom
     public class PlayerMove : MonoBehaviour
     {
         private AIPath aiPathComponent;
+        private Animator animatorComponent;
 
         [SerializeField] private LayerMask environmentLayerMask;
         [SerializeField] private LayerMask environmentFloorLayerMask;
@@ -13,6 +14,7 @@ namespace Game.Bedroom
         private void Awake()
         {
             aiPathComponent = GetComponent<AIPath>();
+            animatorComponent = GetComponent<Animator>();
         }
 
         private void Start()
@@ -50,6 +52,15 @@ namespace Game.Bedroom
                     aiPathComponent.destination = position;
                     aiPathComponent.SearchPath();
                 }
+            }
+
+            if (aiPathComponent.desiredVelocity.x >= 0.01f || aiPathComponent.desiredVelocity.y >= 0.01f)
+            {
+                animatorComponent.SetBool("IsMoving", true);
+            }
+            else
+            {
+                animatorComponent.SetBool("IsMoving", false);
             }
         }
 

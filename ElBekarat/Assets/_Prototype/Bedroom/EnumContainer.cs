@@ -4,6 +4,8 @@ namespace Game.Bedroom
     {
         DEFAULT,
         BED,
-        TABLE
+        TABLE,
+        COMPUTER,
+        PHONE
     }
 }
