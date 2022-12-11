@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\__Prototype\Scripts\Bedroom\EnumContainer.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\PlayerGFX.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\PlayerMove.cs" />
      <Compile Include="Assets\OLD\Scripts\ViewportHandler.cs" />
@@ -52,7 +53,9 @@
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\ComputerObject.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Prolog\PrologManager.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\PhoneObject.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\OLD\Scripts\ChoiceHandler.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Bedroom\BedroomPageManager.cs" />
      <Compile Include="Assets\__Prototype\Scripts\GameManager.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\TableObject.cs" />
      <Compile Include="Assets\OLD\Scripts\EnvOverlay.cs" />
@@ -62,9 +65,7 @@
      <Compile Include="Assets\OLD\Scripts\CameraAnchor.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\BedPanel.cs" />
      <Compile Include="Assets\OLD\Scripts\TaskSleep.cs" />
-     <Compile Include="Assets\__Prototype\Scripts\Bedroom\EnumContainer.cs" />
-     <Compile Include="Assets\__Prototype\Scripts\Bedroom\BedroomManager.cs" />
-     <Compile Include="Assets\__Prototype\Scripts\PlayerStats.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\AudioManager.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
