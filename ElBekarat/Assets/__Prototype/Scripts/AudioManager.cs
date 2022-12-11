@@ -190,6 +190,10 @@ namespace ElBekarat
             {
                 Destroy(gameObject);
             }
+
+            bgmSource = GetComponent<AudioSource>();
+            ambSourceList = new List<AudioSource>();
+            sfxSourceList = new List<AudioSource>();
             FindAllAudioSources();
         }
 

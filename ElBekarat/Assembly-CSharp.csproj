@@ -48,6 +48,7 @@
      <Compile Include="Assets\OLD\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\PhonePanel.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\TablePanel.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\AudioManager.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\ITask.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\ComputerPanel.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\ComputerObject.cs" />
@@ -65,7 +66,6 @@
      <Compile Include="Assets\OLD\Scripts\CameraAnchor.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\BedPanel.cs" />
      <Compile Include="Assets\OLD\Scripts\TaskSleep.cs" />
-     <Compile Include="Assets\__Prototype\Scripts\AudioManager.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
