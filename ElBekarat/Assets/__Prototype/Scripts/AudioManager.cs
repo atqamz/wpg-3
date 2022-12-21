@@ -181,6 +181,7 @@ namespace ElBekarat
         public static AudioManager Instance;
         private void Awake()
         {
+            #region SingletonDDOL
             if (Instance == null)
             {
                 Instance = this;
@@ -190,6 +191,7 @@ namespace ElBekarat
             {
                 Destroy(gameObject);
             }
+            #endregion
 
             bgmSource = GetComponent<AudioSource>();
             ambSourceList = new List<AudioSource>();

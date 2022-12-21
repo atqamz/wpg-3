@@ -1,75 +1,92 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace ElBekarat
 {
     public class PlayerStats : MonoBehaviour
     {
+        private Kara kara;
 
-    }
-
-    public class Kara
-    {
-        public static Kara Instance { get; private set; }
-
-        public void Awake()
+        private void Start()
         {
-            Instance = this;
+            ChangeHappiness(PlayerPrefs.HasKey("Happiness") ? PlayerPrefs.GetFloat("Happiness") : 50);
+            ChangeMotivation(PlayerPrefs.HasKey("Motivation") ? PlayerPrefs.GetFloat("Motivation") : 50);
+            ChangeGoals(PlayerPrefs.HasKey("Goals") ? PlayerPrefs.GetFloat("Goals") : 50);
         }
 
-        private float happinessMeter;
-        public float HappinessMeter
+        private void SetHappiness(float _value)
         {
-            get { return happinessMeter; }
-            set
-            {
-                happinessMeter = value;
-                if (happinessMeter < 0)
-                {
-                    happinessMeter = 0;
-                }
-                if (happinessMeter > 100)
-                {
-                    happinessMeter = 100;
-                }
-            }
+            kara.HappinessMeter = _value;
+            PlayerPrefs.SetFloat("Happiness", _value);
         }
 
-        private float motivationMeter;
-        public float MotivationMeter
+        public float GetHappiness()
         {
-            get { return motivationMeter; }
-            set
-            {
-                motivationMeter = value;
-                if (motivationMeter < 0)
-                {
-                    motivationMeter = 0;
-                }
-                if (motivationMeter > 100)
-                {
-                    motivationMeter = 100;
-                }
-            }
+            return kara.HappinessMeter;
         }
 
-        private float goalsMeter;
-        public float GoalsMeter
+        private void SetMotivation(float _value)
         {
-            get { return goalsMeter; }
-            set
+            kara.MotivationMeter = _value;
+            PlayerPrefs.SetFloat("Motivation", _value);
+        }
+
+        public float GetMotivation()
+        {
+            return kara.MotivationMeter;
+        }
+
+        private void SetGoals(float _value)
+        {
+            kara.GoalsMeter = _value;
+            PlayerPrefs.SetFloat("Goals", _value);
+        }
+
+        public float GetGoals()
+        {
+            return kara.GoalsMeter;
+        }
+
+        // observer pattern
+        public Action<float> OnHappinessChange;
+        public Action<float> OnMotivationChange;
+        public Action<float> OnGoalsChange;
+
+        public void ChangeHappiness(float _value)
+        {
+            SetHappiness(_value);
+            OnHappinessChange?.Invoke(_value);
+        }
+
+        public void ChangeMotivation(float _value)
+        {
+            SetMotivation(_value);
+            OnMotivationChange?.Invoke(_value);
+        }
+
+        public void ChangeGoals(float _value)
+        {
+            SetGoals(_value);
+            OnGoalsChange?.Invoke(_value);
+        }
+
+        // singleton pattern
+        public static PlayerStats Instance { get; private set; }
+        private void Awake()
+        {
+            #region SingletonDDOL
+            if (Instance == null)
             {
-                goalsMeter = value;
-                if (goalsMeter < 0)
-                {
-                    goalsMeter = 0;
-                }
-                if (goalsMeter > 100)
-                {
-                    goalsMeter = 100;
-                }
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
             }
+            else
+            {
+                Destroy(gameObject);
+            }
+            #endregion
+
+            kara = new Kara();
         }
     }
 }

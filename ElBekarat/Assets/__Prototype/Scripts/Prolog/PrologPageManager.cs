@@ -5,24 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-namespace Prolog
+namespace ElBekarat.Prolog
 {
-    public class PrologManager : MonoBehaviour
+    public class PrologPageManager : MonoBehaviour
     {
-        public static PrologManager Instance { get; private set; }
-
-        public void Awake()
-        {
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-
         [SerializeField] private Image overlayGFX;
 
         [Header("Prolog")]
@@ -31,10 +17,6 @@ namespace Prolog
         [SerializeField] private float prologTextSpeed = 0.05f;
         [SerializeField] private Button nextButton;
         private Coroutine typeLineCoroutine;
-
-
-        [Header("Skip")]
-        [SerializeField] private Button skipButton;
 
         private void Start()
         {
@@ -45,27 +27,40 @@ namespace Prolog
             StartCoroutine(StartProlog());
         }
 
-        private IEnumerator OverlayFadeOut()
+        private IEnumerator OverlayFade(float _fade)
         {
             overlayGFX.gameObject.SetActive(true);
-            float alpha = 1f;
-            while (alpha > 0)
+
+            if (_fade == 0)
             {
-                alpha -= Time.deltaTime;
-                overlayGFX.color = new Color(0, 0, 0, alpha);
-                yield return null;
+                overlayGFX.canvasRenderer.SetAlpha(1f);
             }
-            overlayGFX.gameObject.SetActive(false);
+            else
+            {
+                overlayGFX.canvasRenderer.SetAlpha(0f);
+            }
+
+            overlayGFX.CrossFadeAlpha(_fade, 2f, false);
+
+            yield return new WaitForSeconds(2f);
         }
 
         private IEnumerator StartProlog()
         {
-            StartCoroutine(OverlayFadeOut());
-
-            yield return new WaitForSeconds(1f);
+            StartCoroutine(OverlayFade(0));
+            yield return new WaitForSeconds(2f);
+            overlayGFX.gameObject.SetActive(false);
 
             typeLineCoroutine = StartCoroutine(TypeLine());
-            StartCoroutine(ShowSkipButton());
+        }
+
+        private IEnumerator EndProlog()
+        {
+            StartCoroutine(OverlayFade(1));
+
+            yield return new WaitForSeconds(3f);
+
+            SceneManager.LoadScene("Bedroom");
         }
 
         private void NextLine()
@@ -76,7 +71,7 @@ namespace Prolog
             }
             else
             {
-                SceneManager.LoadScene("Bedroom");
+                StartCoroutine(EndProlog());
             }
         }
 
@@ -107,16 +102,17 @@ namespace Prolog
             NextLine();
         }
 
-        private void OnSkipButtonClick()
+        public static PrologPageManager Instance { get; private set; }
+        public void Awake()
         {
-            skipButton.gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(UnityEngine.Random.Range(-100, -500), UnityEngine.Random.Range(-100, -500));
-        }
-
-        private IEnumerator<WaitForSeconds> ShowSkipButton()
-        {
-            skipButton.interactable = false;
-            yield return new WaitForSeconds(5f);
-            skipButton.interactable = true;
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

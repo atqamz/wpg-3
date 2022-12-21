@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace ElBekarat
+namespace ElBekarat.Bedroom.UI
 {
     public class UIManager : MonoBehaviour
     {
@@ -26,7 +27,6 @@ namespace ElBekarat
         {
             onEnvironmentRangeUI.Hide();
         }
-
 
         private void HideAllUI()
         {

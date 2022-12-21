@@ -1,22 +1,25 @@
 using UnityEngine;
 using TMPro;
 
-public class OnEnvironmentRangeUI : MonoBehaviour
+namespace ElBekarat.Bedroom.UI
 {
-    [SerializeField] private TextMeshProUGUI infoText;
-
-    public void Show()
+    public class OnEnvironmentRangeUI : MonoBehaviour
     {
-        gameObject.SetActive(true);
-    }
+        [SerializeField] private TextMeshProUGUI infoText;
 
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-    }
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
 
-    public void SetInfoText(string _text)
-    {
-        infoText.text = _text;
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void SetInfoText(string _text)
+        {
+            infoText.text = _text;
+        }
     }
 }

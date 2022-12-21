@@ -10,20 +10,41 @@ namespace ElBekarat.Bedroom
 
         private void Start()
         {
-            StartCoroutine(OverlayFadeOut());
+            StartCoroutine(StartPage());
         }
 
-        private IEnumerator OverlayFadeOut()
+        private IEnumerator OverlayFade(float _fade)
         {
             overlayGFX.gameObject.SetActive(true);
-            float alpha = 1f;
-            while (alpha > 0)
+
+            if (_fade == 0)
             {
-                alpha -= Time.deltaTime;
-                overlayGFX.color = new Color(0, 0, 0, alpha);
-                yield return null;
+                overlayGFX.canvasRenderer.SetAlpha(1f);
             }
+            else
+            {
+                overlayGFX.canvasRenderer.SetAlpha(0f);
+            }
+
+            overlayGFX.CrossFadeAlpha(_fade, 2f, false);
+
+            yield return new WaitForSeconds(2f);
+        }
+
+        private IEnumerator StartPage()
+        {
+            StartCoroutine(OverlayFade(0));
+            yield return new WaitForSeconds(2f);
             overlayGFX.gameObject.SetActive(false);
+        }
+
+        private IEnumerator EndPage()
+        {
+            StartCoroutine(OverlayFade(1));
+
+            yield return new WaitForSeconds(3f);
+
+            // SceneManager.LoadScene("");
         }
 
         public static BedroomPageManager Instance { get; private set; }

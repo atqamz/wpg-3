@@ -8,7 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>ElBekarat</RootNamespace>
     <ProjectGuid>{4325baf4-b940-6af7-721d-d6d8de51c041}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -40,7 +40,10 @@
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\PlayerGFX.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\PlayerMove.cs" />
      <Compile Include="Assets\OLD\Scripts\ViewportHandler.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Prolog\PrologPageManager.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\BedObject.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\StaticFront.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Kara.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\BaseEnvObject.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\EventManager.cs" />
      <Compile Include="Assets\OLD\Scripts\OverlayManager.cs" />
@@ -52,7 +55,6 @@
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\ITask.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\ComputerPanel.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\ComputerObject.cs" />
-     <Compile Include="Assets\__Prototype\Scripts\Prolog\PrologManager.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\PhoneObject.cs" />
      <Compile Include="Assets\__Prototype\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\OLD\Scripts\ChoiceHandler.cs" />
@@ -63,9 +65,11 @@
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\UI\OnEnvironmentRangeUI.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\BaseEnvPanel.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\IClickable.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Bedroom\UI\StatusBar.cs" />
      <Compile Include="Assets\OLD\Scripts\CameraAnchor.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\BedPanel.cs" />
      <Compile Include="Assets\OLD\Scripts\TaskSleep.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Bedroom\UI\Menu.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
