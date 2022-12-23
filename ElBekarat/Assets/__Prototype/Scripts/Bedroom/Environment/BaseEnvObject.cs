@@ -13,10 +13,18 @@ namespace ElBekarat.Bedroom
         {
             if (Input.GetMouseButtonDown(1))
             {
-                if (onRange)
+                if (!onRange)
+                    return;
+
+                if (!environmentPanel.GetComponent<Interact>().IsMoodEnough())
                 {
-                    EventManager.Instance.EnvironmentClick(environmentType);
+                    EventManager.Instance.MoodNotEnough();
+                    return;
                 }
+
+                environmentPanel.SetActive(true);
+
+                EventManager.Instance.EnvironmentClick(environmentType);
             }
         }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ElBekarat
 {
@@ -14,6 +15,10 @@ namespace ElBekarat
 
         }
 
+        public void LoadScene(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
 
         public static GameManager Instance;
         private void Awake()

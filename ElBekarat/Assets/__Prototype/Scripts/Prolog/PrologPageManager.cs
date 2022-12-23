@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 namespace ElBekarat.Prolog
@@ -60,7 +59,7 @@ namespace ElBekarat.Prolog
 
             yield return new WaitForSeconds(3f);
 
-            SceneManager.LoadScene("Bedroom");
+            GameManager.Instance.LoadScene("Bedroom");
         }
 
         private void NextLine()

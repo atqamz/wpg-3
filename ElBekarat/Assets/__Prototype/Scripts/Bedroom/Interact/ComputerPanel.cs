@@ -4,10 +4,15 @@ using TMPro;
 
 namespace ElBekarat.Bedroom
 {
-    public class ComputerPanel : MonoBehaviour, ITask
+    public class ComputerPanel : Interact, ITask
     {
         [SerializeField] private Button enterButton;
         [SerializeField] private TextMeshProUGUI monitorText;
+
+        public void OnTaskEnd()
+        {
+            AddCompletingMood();
+        }
 
         private void Awake()
         {
@@ -18,11 +23,6 @@ namespace ElBekarat.Bedroom
         {
             monitorText.text = "Assignment submitted!";
             OnTaskEnd();
-        }
-
-        public void OnTaskEnd()
-        {
-            // status logic here
         }
     }
 }

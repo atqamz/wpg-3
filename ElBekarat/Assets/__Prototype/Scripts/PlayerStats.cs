@@ -9,15 +9,39 @@ namespace ElBekarat
 
         private void Start()
         {
-            ChangeHappiness(PlayerPrefs.HasKey("Happiness") ? PlayerPrefs.GetFloat("Happiness") : 50);
-            ChangeMotivation(PlayerPrefs.HasKey("Motivation") ? PlayerPrefs.GetFloat("Motivation") : 50);
-            ChangeGoals(PlayerPrefs.HasKey("Goals") ? PlayerPrefs.GetFloat("Goals") : 50);
+            if (PlayerPrefs.HasKey("Happiness") && PlayerPrefs.HasKey("Motivation") && PlayerPrefs.HasKey("Goals"))
+            {
+                ChangeHappiness(PlayerPrefs.GetFloat("Happiness"));
+                ChangeMotivation(PlayerPrefs.GetFloat("Motivation"));
+                ChangeGoals(PlayerPrefs.GetFloat("Goals"));
+
+                return;
+            }
+
+            RandomizeStats();
+        }
+
+        private void RandomizeStats()
+        {
+            int[] stats = { 20, 10, 10 };
+
+            for (int i = 0; i < stats.Length; i++)
+            {
+                int randomIndex = UnityEngine.Random.Range(0, stats.Length);
+                int temp = stats[i];
+                stats[i] = stats[randomIndex];
+                stats[randomIndex] = temp;
+            }
+
+            ChangeHappiness(stats[0]);
+            ChangeMotivation(stats[1]);
+            ChangeGoals(stats[2]);
         }
 
         private void SetHappiness(float _value)
         {
             kara.HappinessMeter = _value;
-            PlayerPrefs.SetFloat("Happiness", _value);
+            // PlayerPrefs.SetFloat("Happiness", _value);
         }
 
         public float GetHappiness()
@@ -28,7 +52,7 @@ namespace ElBekarat
         private void SetMotivation(float _value)
         {
             kara.MotivationMeter = _value;
-            PlayerPrefs.SetFloat("Motivation", _value);
+            // PlayerPrefs.SetFloat("Motivation", _value);
         }
 
         public float GetMotivation()
@@ -39,7 +63,7 @@ namespace ElBekarat
         private void SetGoals(float _value)
         {
             kara.GoalsMeter = _value;
-            PlayerPrefs.SetFloat("Goals", _value);
+            // PlayerPrefs.SetFloat("Goals", _value);
         }
 
         public float GetGoals()

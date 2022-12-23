@@ -24,6 +24,12 @@ namespace ElBekarat.Bedroom
             onEnvironmentClick?.Invoke(_environmentType);
         }
 
+        public event Action onMoodNotEnough;
+        public void MoodNotEnough()
+        {
+            onMoodNotEnough?.Invoke();
+        }
+
         // bed events
         public event Action<bool> onBed;
         public void Bed(bool _isOn)

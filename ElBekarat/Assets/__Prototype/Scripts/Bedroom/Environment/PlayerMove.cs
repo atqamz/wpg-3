@@ -28,6 +28,8 @@ namespace ElBekarat.Bedroom
 
         private void Update()
         {
+            if (PageManager.Instance.CanInteract == false) return;
+
             if (Input.GetMouseButtonDown(0))
             {
                 Vector3 position = GetMouseWorldPosition();
@@ -54,7 +56,7 @@ namespace ElBekarat.Bedroom
                 }
             }
 
-            if (aiPathComponent.desiredVelocity.x >= 0.01f || aiPathComponent.desiredVelocity.y >= 0.01f)
+            if (aiPathComponent.)
             {
                 animatorComponent.SetBool("IsMoving", true);
             }

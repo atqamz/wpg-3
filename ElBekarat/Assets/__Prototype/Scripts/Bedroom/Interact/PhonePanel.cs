@@ -5,10 +5,15 @@ using UnityEngine.UI;
 
 namespace ElBekarat.Bedroom
 {
-    public class PhonePanel : MonoBehaviour, ITask
+    public class PhonePanel : Interact, ITask
     {
         [SerializeField] private GameObject chatArea;
         private List<Image> chatMessageList;
+
+        public void OnTaskEnd()
+        {
+            AddCompletingMood();
+        }
 
         private void Awake()
         {
@@ -48,6 +53,8 @@ namespace ElBekarat.Bedroom
             ShowChatMessage(10);
             yield return new WaitForSeconds(1f);
             ShowChatMessage(11);
+
+            OnTaskEnd();
         }
 
         private void AppendAllChatMessages()
@@ -69,11 +76,6 @@ namespace ElBekarat.Bedroom
         private void ShowChatMessage(int _index)
         {
             chatMessageList[_index].enabled = true;
-        }
-
-        public void OnTaskEnd()
-        {
-            // status logic here
         }
     }
 }

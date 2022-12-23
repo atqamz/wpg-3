@@ -58,18 +58,22 @@
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\PhoneObject.cs" />
      <Compile Include="Assets\__Prototype\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\OLD\Scripts\ChoiceHandler.cs" />
-     <Compile Include="Assets\__Prototype\Scripts\Bedroom\BedroomPageManager.cs" />
      <Compile Include="Assets\__Prototype\Scripts\GameManager.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\TableObject.cs" />
      <Compile Include="Assets\OLD\Scripts\EnvOverlay.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\UI\OnEnvironmentRangeUI.cs" />
-     <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\BaseEnvPanel.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Environment\IClickable.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\UI\StatusBar.cs" />
      <Compile Include="Assets\OLD\Scripts\CameraAnchor.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\BedPanel.cs" />
      <Compile Include="Assets\OLD\Scripts\TaskSleep.cs" />
      <Compile Include="Assets\__Prototype\Scripts\Bedroom\UI\Menu.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\MainMenu\PageManager.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Bedroom\PageManager.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\MainMenu\ExitPopUp.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\MainMenu\SettingPopUp.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Bedroom\UI\BackToMainMenuPopUp.cs" />
+     <Compile Include="Assets\__Prototype\Scripts\Bedroom\Interact\Interact.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

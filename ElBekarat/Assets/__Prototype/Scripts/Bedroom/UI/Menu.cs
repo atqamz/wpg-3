@@ -9,16 +9,31 @@ namespace ElBekarat.Bedroom.UI
         private Animator inGameMenuAnimator;
         [SerializeField] private Button inGameMenuButton;
 
-        public void SetOnInGameMenuAnimator()
+        [Header("Pop Up")]
+        [SerializeField] private Button backToMainMenuButton;
+        [SerializeField] private GameObject backToMainMenuPopUp;
+
+        private void Start()
+        {
+            inGameMenuButton.onClick.AddListener(SetInGameMenuAnimator);
+            backToMainMenuButton.onClick.AddListener(ShowBackToMainMenuPopUp);
+        }
+
+        public void SetInGameMenuAnimator()
         {
             isInGameMenuOn = !isInGameMenuOn;
             inGameMenuAnimator.SetBool("isOn", isInGameMenuOn);
         }
 
+        public void ShowBackToMainMenuPopUp()
+        {
+            PageManager.Instance.CanInteract = false;
+            backToMainMenuPopUp.SetActive(true);
+        }
+
         private void Awake()
         {
             inGameMenuAnimator = GetComponent<Animator>();
-            inGameMenuButton.onClick.AddListener(SetOnInGameMenuAnimator);
         }
     }
 }

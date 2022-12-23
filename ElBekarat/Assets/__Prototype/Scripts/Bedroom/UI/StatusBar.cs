@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +27,24 @@ namespace ElBekarat.Bedroom.UI
 
         private void UpdateStatus(float _value)
         {
-            slider.value = _value;
+            float time = 1f;
+            StartCoroutine(AnimateValue(_value, time));
+        }
+
+        private IEnumerator AnimateValue(float _value, float _time)
+        {
+            float startValue = slider.value;
+            float endValue = _value;
+            float elapsedTime = 0;
+
+            while (elapsedTime < _time)
+            {
+                slider.value = Mathf.Lerp(startValue, endValue, (elapsedTime / _time));
+                elapsedTime += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+
+            slider.value = endValue;
         }
     }
 }

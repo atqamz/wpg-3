@@ -390,7 +390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 524.37}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4870837799644293837
@@ -642,6 +642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0474295277198d45bdd0d940489d66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minimumMood: 0a0000000a00000000000000
+  completingMood: 050000000500000000000000
+  uncompletingMood: 050000000500000000000000
   makanButton: {fileID: 459750549122610945}
   isiMakanImage: {fileID: 3924962088319872478}
   isiMakanSpriteList:

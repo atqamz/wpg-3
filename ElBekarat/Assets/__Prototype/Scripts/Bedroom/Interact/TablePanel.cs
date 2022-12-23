@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace ElBekarat.Bedroom
 {
-    public class TablePanel : MonoBehaviour, ITask
+    public class TablePanel : Interact, ITask
     {
         [Header("Makan")]
         [SerializeField] private Button makanButton;
@@ -15,6 +15,11 @@ namespace ElBekarat.Bedroom
         [Header("Minum")]
         [SerializeField] private Slider minumSlider;
         private float minumCurrentValue;
+
+        public void OnTaskEnd()
+        {
+            AddCompletingMood();
+        }
 
         private void Awake()
         {
@@ -76,11 +81,6 @@ namespace ElBekarat.Bedroom
         private bool IsDoneMinum()
         {
             return minumSlider.value == minumSlider.minValue;
-        }
-
-        public void OnTaskEnd()
-        {
-            // status logic here
         }
     }
 }

@@ -3,10 +3,15 @@ using UnityEngine.UI;
 
 namespace ElBekarat.Bedroom
 {
-    public class BedPanel : MonoBehaviour
+    public class BedPanel : Interact, ITask
     {
         [SerializeField] private Image playerImage;
         [SerializeField] private Slider blanketSlider;
+
+        public void OnTaskEnd()
+        {
+            // Calculate mood here
+        }
 
         private void Awake()
         {
