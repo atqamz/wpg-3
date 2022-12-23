@@ -12,6 +12,8 @@ namespace ElBekarat.Bedroom
         private void Start()
         {
             StartCoroutine(StartPage());
+
+            PlayerStats.Instance.RandomizeStats();
         }
 
         public bool CanInteract

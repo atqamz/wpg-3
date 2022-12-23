@@ -7,28 +7,14 @@ namespace ElBekarat
     {
         private Kara kara;
 
-        private void Start()
+        public void RandomizeStats()
         {
-            if (PlayerPrefs.HasKey("Happiness") && PlayerPrefs.HasKey("Motivation") && PlayerPrefs.HasKey("Goals"))
-            {
-                ChangeHappiness(PlayerPrefs.GetFloat("Happiness"));
-                ChangeMotivation(PlayerPrefs.GetFloat("Motivation"));
-                ChangeGoals(PlayerPrefs.GetFloat("Goals"));
-
-                return;
-            }
-
-            RandomizeStats();
-        }
-
-        private void RandomizeStats()
-        {
-            int[] stats = { 20, 10, 10 };
+            float[] stats = { 20, 10, 10 };
 
             for (int i = 0; i < stats.Length; i++)
             {
                 int randomIndex = UnityEngine.Random.Range(0, stats.Length);
-                int temp = stats[i];
+                float temp = stats[i];
                 stats[i] = stats[randomIndex];
                 stats[randomIndex] = temp;
             }
