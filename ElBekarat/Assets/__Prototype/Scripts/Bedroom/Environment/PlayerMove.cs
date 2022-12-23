@@ -24,6 +24,8 @@ namespace ElBekarat.Bedroom
 
             // disable AstarPath logs
             AstarPath.active.logPathResults = PathLog.None;
+
+            animatorComponent.SetBool("IsMoving", false);
         }
 
         private void Update()
@@ -56,7 +58,7 @@ namespace ElBekarat.Bedroom
                 }
             }
 
-            if (aiPathComponent.)
+            if (aiPathComponent.remainingDistance > 1f && aiPathComponent.remainingDistance < 1000f)
             {
                 animatorComponent.SetBool("IsMoving", true);
             }

@@ -10,19 +10,10 @@ namespace ElBekarat.Prolog
     {
         [SerializeField] private Image overlayGFX;
 
-        [Header("Prolog")]
-        [SerializeField][TextArea(3, 10)] private List<string> prologTextList;
-        [SerializeField] private TextMeshProUGUI prologText;
-        [SerializeField] private float prologTextSpeed = 0.05f;
-        [SerializeField] private Button nextButton;
-        private Coroutine typeLineCoroutine;
+        [SerializeField] private BookPro logBook;
 
         private void Start()
         {
-            nextButton.onClick.AddListener(OnNextButtonClick);
-
-            prologText.text = string.Empty;
-
             StartCoroutine(StartProlog());
         }
 
@@ -49,12 +40,12 @@ namespace ElBekarat.Prolog
             StartCoroutine(OverlayFade(0));
             yield return new WaitForSeconds(2f);
             overlayGFX.gameObject.SetActive(false);
-
-            typeLineCoroutine = StartCoroutine(TypeLine());
         }
 
         private IEnumerator EndProlog()
         {
+            yield return new WaitForSeconds(2f);
+
             StartCoroutine(OverlayFade(1));
 
             yield return new WaitForSeconds(3f);
@@ -62,43 +53,12 @@ namespace ElBekarat.Prolog
             GameManager.Instance.LoadScene("Bedroom");
         }
 
-        private void NextLine()
+        public void CheckIfPageIsDone()
         {
-            if (prologTextList.Count > 0)
-            {
-                typeLineCoroutine = StartCoroutine(TypeLine());
-            }
-            else
+            if (logBook.CurrentPaper == logBook.papers.Length - 1)
             {
                 StartCoroutine(EndProlog());
             }
-        }
-
-        private IEnumerator TypeLine()
-        {
-            string line = prologTextList[0];
-            prologText.text = "";
-            foreach (char letter in line.ToCharArray())
-            {
-                prologText.text += letter;
-                yield return new WaitForSeconds(prologTextSpeed);
-            }
-
-            typeLineCoroutine = null;
-        }
-
-        public void OnNextButtonClick()
-        {
-            if (typeLineCoroutine != null)
-            {
-                StopCoroutine(typeLineCoroutine);
-                prologText.text = prologTextList[0];
-                typeLineCoroutine = null;
-                return;
-            }
-            prologTextList.RemoveAt(0);
-
-            NextLine();
         }
 
         public static PrologPageManager Instance { get; private set; }

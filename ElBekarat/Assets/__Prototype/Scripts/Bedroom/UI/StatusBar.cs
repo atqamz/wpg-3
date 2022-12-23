@@ -25,6 +25,22 @@ namespace ElBekarat.Bedroom.UI
             }
         }
 
+        private void Start()
+        {
+            switch (statusType)
+            {
+                case StatusType.HAPPINESS:
+                    PlayerStats.Instance.GetHappiness();
+                    break;
+                case StatusType.MOTIVATION:
+                    PlayerStats.Instance.GetMotivation();
+                    break;
+                case StatusType.GOALS:
+                    PlayerStats.Instance.GetGoals();
+                    break;
+            }
+        }
+
         private void UpdateStatus(float _value)
         {
             float time = 1f;
